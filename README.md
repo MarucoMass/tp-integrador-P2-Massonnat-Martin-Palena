@@ -5,7 +5,7 @@
 
 ## Francisco Palena (53340)
 
-# 1TUP/
+# 1TUP7
 # 2024
 # Programación 2
 # Breve descripción que ponga en contexto lo desarrollado en el Trabajo Práctico
