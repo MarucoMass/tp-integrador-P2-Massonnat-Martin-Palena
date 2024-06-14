@@ -12,3 +12,7 @@ def calcular_probabilidad_captura(nivel_pokemon):
         return True
     else:
         return False
+
+
+
+

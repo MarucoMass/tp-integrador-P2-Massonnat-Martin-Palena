@@ -3,16 +3,12 @@ from habilidad import Habilidad
 
 class Pokemon:
 
-    def __init__(
-        self, nombre: str, nivel: str, tipo: str, salud: int, ataque: int, defensa: int
-    ):
+    def __init__(self, nombre: str, nivel: str, tipo: str):
         self.__nombre = nombre
         self.__nivel = nivel
         self.__tipo = tipo
-        self.__salud = salud
-        self.__ataque = ataque
-        self.__defensa = defensa
         self.__habilidades = []
+        self.__ataque_con_habilidad = None 
 
     @property
     def nombre(self) -> str:
@@ -27,33 +23,20 @@ class Pokemon:
         return self.__tipo
 
     @property
-    def salud(self) -> str:
-        return self.__salud
-
-    @salud.setter
-    def salud(self, value):
-        self.__salud = value
-
-    @property
-    def ataque(self) -> str:
-        return self.__ataque
-
-    @ataque.setter
-    def ataque(self, value):
-        self.__ataque = value
-
-    @property
-    def defensa(self) -> str:
-        return self.__defensa
-
-    @defensa.setter
-    def defensa(self, value):
-        self.__defensa = value
-
-    @property
     def habilidades(self) -> list:
         return self.__habilidades
 
+    
+    def salud():
+    
+    def ataque_base():
+        
+    def defensa():
+        
+    
+    
+    # Metodos
+    
     def recibir_ataque(self, dano: int):
         self.salud -= dano
 

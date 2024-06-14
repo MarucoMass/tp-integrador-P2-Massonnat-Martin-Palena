@@ -4,9 +4,7 @@ class Habilidad:
         self.__dano = dano
 
     @property
-    def nombre(
-        self,
-    ):
+    def nombre(self):
         return self.__nombre
 
     @nombre.setter
@@ -14,9 +12,7 @@ class Habilidad:
         self.__nombre = new_nombre
 
     @property
-    def dano(
-        self,
-    ):
+    def dano(self):
         return self.__dano
 
     @dano.setter

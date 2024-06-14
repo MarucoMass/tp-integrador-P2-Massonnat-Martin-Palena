@@ -2,15 +2,11 @@ from pokemon import Pokemon
 
 
 class Pokedex:
-    def __init__(
-        self,
-    ):
+    def __init__(self):
         self.__pokemons = []
 
     @property
-    def pokemons(
-        self,
-    ):
+    def pokemons(self):
         return self.__pokemons
 
     def agregar_pokemon(self, pokemon: Pokemon):
