@@ -8,7 +8,7 @@ class Pokemon:
         self.__nivel = nivel
         self.__tipo = tipo
         self.__habilidades = []
-        self.__ataque_con_habilidad = None 
+        self.__ataque_con_habilidad = None
 
     @property
     def nombre(self) -> str:
@@ -26,17 +26,17 @@ class Pokemon:
     def habilidades(self) -> list:
         return self.__habilidades
 
-    
     def salud():
-    
+        pass
+
     def ataque_base():
-        
+        pass
+
     def defensa():
-        
-    
-    
+        pass
+
     # Metodos
-    
+
     def recibir_ataque(self, dano: int):
         self.salud -= dano
 
