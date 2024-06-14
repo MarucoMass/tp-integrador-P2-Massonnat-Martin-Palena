@@ -2,7 +2,7 @@ from pokemon import Pokemon
 from pokedex import Pokedex
 from probabilidad_captura import calcular_probabilidad_captura
 from objeto import Objeto
-
+from gimnasio import Gimnasio
 
 class Entrenador:
 
@@ -102,16 +102,6 @@ class Entrenador:
     def __str__(self) -> str:
         return f"Nombre{self.nombre} ID: {self.default_pokemon}"
 
+    def dueloGimnasio(self, gimnasio: Gimnasio):
+        pass
 
-ent1 = Entrenador("maruco")
-ent2 = Entrenador("pale")
-
-ent1.capturar_pokemon("pale")
-ent1.capturar_pokemon("will")
-
-ent1.pokemon_elegido(0)
-
-print(ent1)
-
-if ent2.nombre:
-    print(ent2)

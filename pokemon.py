@@ -3,7 +3,7 @@ from habilidad import Habilidad
 
 class Pokemon:
 
-    def __init__(self, nombre: str, nivel: str, tipo: str, salud: int, ataque_base: int, defensa: int):
+    def __init__(self, nombre: str, nivel: int, tipo: str, salud: int, ataque_base: int, defensa: int):
         self.__nombre = nombre
         self.__nivel = nivel
         self.__tipo = tipo
@@ -22,7 +22,7 @@ class Pokemon:
         return self.__tipo
 
     @property
-    def nivel(self) -> str:
+    def nivel(self) -> int:
         return self.__nivel
     
     @nivel.setter

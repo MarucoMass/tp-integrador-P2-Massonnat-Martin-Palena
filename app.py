@@ -1,3 +1,6 @@
+from datos import *
+import random
+
 # Explorar(Aca es donde aleatoriamente selecciona un pokemon y lo muestra)
 # Usar Objeto(Utilizar un objeto en un pokemon del equipo)
 # Comprar objeto(Mostramos unos objetos y preguntamos si desea comprarlo tambien validamos si tiene mas de 5 objetos)
@@ -24,8 +27,23 @@
 #         Días: [{self.cantidad_dias}]
 #         Costo: $ {self.costo}'''
 
+def entrenadorPrincipal():
+    return lista_entrenadores[0]
+
 def capturarPokemon():
-    pass
+    pokemon_random = random.randint(0, len(lista_pokemons))
+    print(f"Te has encotrado con un {lista_pokemons[pokemon_random].nombre} salvaje!\nQuieres capturarlo? 1-Si 2-No")
+    opt = int(input("Toma una decision: "))
+    if opt == 1:
+        if entrenadorPrincipal().capturarPokemon(lista_pokemons[pokemon_random]):
+            print("Lo has logrado capturar!")   
+        else:
+            print(f"Oh no, el {lista_pokemons[pokemon_random].nombre} a huido!")
+    elif opt == 2:
+        print("Has logrado escapar.")
+    else:
+        print("No existe esta opcion!")
+    
 
 def retarLiderGimnasio():
     pass
@@ -47,7 +65,8 @@ def verPokedex():
 
 
 def menu():
-    print(f'''1- Explorar
+    print(f'''
+    1- Explorar
     2- Aplicar objeto a tu pokemon
     3- Comprar Objeto
     4- Ver tu pokedex
