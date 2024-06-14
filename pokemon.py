@@ -3,24 +3,56 @@ from habilidad import Habilidad
 
 class Pokemon:
 
-    def __init__(self, nombre: str, nivel: str, tipo: str):
+    def __init__(self, nombre: str, nivel: str, tipo: str, salud: int, ataque_base: int, defensa: int):
         self.__nombre = nombre
         self.__nivel = nivel
         self.__tipo = tipo
+        self.__salud = salud
+        self.__ataque_base = ataque_base
+        self.__defensa = defensa
         self.__habilidades = []
         self.__ataque_con_habilidad = None
 
     @property
     def nombre(self) -> str:
         return self.__nombre
+    
+    @property
+    def tipo(self) -> str:
+        return self.__tipo
 
     @property
     def nivel(self) -> str:
         return self.__nivel
+    
+    @nivel.setter
+    def nivel(self, new_nivel):
+        self.__nivel = new_nivel
 
     @property
-    def tipo(self) -> str:
-        return self.__tipo
+    def salud(self):
+        return self.__salud
+    
+    @salud.setter
+    def salud(self, new_salud):
+        self.__salud = new_salud
+        
+    @property
+    def ataque_base(self):
+        return self.__ataque_base
+    
+    @ataque_base.setter 
+    def ataque_base(self, new_ataque_base):
+        self.__ataque_base = new_ataque_base
+        
+    @property
+    def defensa(self):
+        return self.__defensa
+    
+    @defensa.setter
+    def defensa(self, new_defensa):
+        self.__defensa = new_defensa
+    
 
     @property
     def habilidades(self) -> list:
