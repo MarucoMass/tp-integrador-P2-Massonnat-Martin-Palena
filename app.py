@@ -27,23 +27,23 @@ import random
 #         Días: [{self.cantidad_dias}]
 #         Costo: $ {self.costo}'''
 
-def entrenadorPrincipal():
+def entrenador_principal():
     return lista_entrenadores[0]
 
-def capturarPokemon():
+def capturar_pokemon():
     pokemon_random = random.randint(0, len(lista_pokemons)-1)
-    if lista_pokemons[pokemon_random] not in entrenadorPrincipal().pokedex.pokemons:
-        entrenadorPrincipal().pokedex.agregar_pokemon(lista_pokemons[pokemon_random])
+    if lista_pokemons[pokemon_random] not in entrenador_principal().pokedex.pokemons:
+        entrenador_principal().pokedex.agregar_pokemon(lista_pokemons[pokemon_random])
         
     print(f"Te has encontrado con un {lista_pokemons[pokemon_random].nombre} salvaje!\nQuieres capturarlo? 1-Si 2-No")
     opt = int(input("Toma una decision: "))
     if opt == 1:
-        if entrenadorPrincipal().capturarPokemon(lista_pokemons[pokemon_random]):
-            entrenadorPrincipal().default_pokemon.recibirAtaque(lista_pokemons[pokemon_random].ataque_base - entrenadorPrincipal().default_pokemon.defensa)
+        if entrenador_principal().capturar_pokemon(lista_pokemons[pokemon_random]):
+            entrenador_principal().default_pokemon.recibir_ataque(lista_pokemons[pokemon_random].ataque_base - entrenador_principal().default_pokemon.defensa)
             print("Lo has logrado capturar!")   
         else:
             print(f"Oh no, el {lista_pokemons[pokemon_random].nombre} a huido!")
-            entrenadorPrincipal().default_pokemon.recibirAtaque(lista_pokemons[pokemon_random].ataque_base)
+            entrenador_principal().default_pokemon.recibir_ataque(lista_pokemons[pokemon_random].ataque_base)
                 
     elif opt == 2:
         print("Has logrado escapar.")
@@ -51,8 +51,8 @@ def capturarPokemon():
         print("No existe esta opcion!")
     
 
-def retarLiderGimnasio():
-    if entrenadorPrincipal().default_pokemon != None:
+def retar_lider_gimnasio():
+    if entrenador_principal().default_pokemon != None:
         for index, gimnasio in enumerate(lista_gimnasios, 1):
             print(f"{index} - {gimnasio}")
 
@@ -60,37 +60,36 @@ def retarLiderGimnasio():
 
         gimnasio_seleccionado = lista_gimnasios[opt-1]
 
-        if calcular_probabilidad(gimnasio_seleccionado.dueloPokemon(entrenadorPrincipal())):
-            entrenadorPrincipal().agregarMedalla(lista_gimnasios[opt-1].medalla)
+        if calcular_probabilidad(gimnasio_seleccionado.duelo_pokemon(entrenador_principal())):
+            entrenador_principal().agregar_medalla(lista_gimnasios[opt-1].medalla)
             print("Ganaste")
-            entrenadorPrincipal().default_pokemon.recibirAtaque(gimnasio_seleccionado.entrenador.default_pokemon.ataque_base - entrenadorPrincipal().default_pokemon.defensa)
+            entrenador_principal().default_pokemon.recibir_ataque(gimnasio_seleccionado.entrenador.default_pokemon.ataque_base - entrenador_principal().default_pokemon.defensa)
         else:
             print("Perdiste")
-            entrenadorPrincipal().default_pokemon.salud = 0
+            entrenador_principal().default_pokemon.salud = 0
     else:
         print("Antes de luchar debes elegir tu pokemon")
 
-def aplicarObjeto():
-    if (entrenadorPrincipal().cant_objetos) > 0:
-        for i,objeto in enumerate(entrenadorPrincipal().objetos ,1):
+def aplicar_objeto():
+    if (entrenador_principal().cant_objetos) > 0:
+        for i,objeto in enumerate(entrenador_principal().objetos ,1):
             print(f"{i} {objeto}")
         
         objeto_elegido = int(input("Elija un objeto: "))
         
-        for i,pokemon in enumerate(entrenadorPrincipal().equipo ,1):
+        for i,pokemon in enumerate(entrenador_principal().equipo ,1):
             print(f"{i} {pokemon}")
 
         pokemon_elegido = int(input("En quien quiere usar el objeto: "))
         
-        entrenadorPrincipal().usarObjeto(objeto_elegido - 1, pokemon_elegido - 1)
+        entrenador_principal().usar_objeto(objeto_elegido - 1, pokemon_elegido - 1)
     else:
         print("No tienes objetos")
         
-    #print(entrenadorPrincipal().equipo[0].salud)
+    #print(entrenador_principal().equipo[0].salud)
         
-def comprarObjeto():
+def comprar_objeto():
     objetos_aleatorios = random.sample(range(len(lista_objetos)), 3)
-    print(objetos_aleatorios)
     print("Estos objetos son los que tiene la tienda ahora mismo:")
     for i,objeto in enumerate(objetos_aleatorios, 1):
         print(f"{i} {lista_objetos[objeto]}")
@@ -99,31 +98,31 @@ def comprarObjeto():
     if  indice_objeto_comprado > 3 or indice_objeto_comprado < 1:
         print("No valido")
     else:
-        entrenadorPrincipal().agregarObjeto(lista_objetos[objetos_aleatorios[indice_objeto_comprado - 1]])
+        entrenador_principal().agregar_objeto(lista_objetos[objetos_aleatorios[indice_objeto_comprado - 1]])
     
     
 
-def verPokedex():
-    for pokemon in entrenadorPrincipal().pokedex.pokemons:
+def ver_pokedex():
+    for pokemon in entrenador_principal().pokedex.pokemons:
         print(f"{pokemon.nombre} - Nivel: {pokemon.nivel}")
 
 
-def elegirPokemonCompanero():
-    for i,pokemon in enumerate(entrenadorPrincipal().equipo, 1):
+def elegir_pokemon_companero():
+    for i,pokemon in enumerate(entrenador_principal().equipo, 1):
             print(f"{i} {pokemon}")
         
         
 
     pokemon_elegido = int(input("Con quien deseas ir a explorar: "))
     
-    if pokemon_elegido < 0 or pokemon_elegido > len(entrenadorPrincipal().equipo):
+    if pokemon_elegido < 0 or pokemon_elegido > len(entrenador_principal().equipo):
         print("Opcion no valida")
         return False
     else:
-        if entrenadorPrincipal().equipo[pokemon_elegido - 1].salud == 0:
+        if entrenador_principal().equipo[pokemon_elegido - 1].salud == 0:
             print("Tienes que elegir un pokemon con vida!")
             return False
-        entrenadorPrincipal().elegirPokemon(pokemon_elegido - 1)
+        entrenador_principal().elegir_pokemon(pokemon_elegido - 1)
         return True
 
 
@@ -137,7 +136,7 @@ def menu():
     5- Salir
           ''')
 
-def subMenu():
+def sub_menu():
     print(f''' 
           1- Salir a capturar pokemons
           2- Retar a lider de gimnasio
@@ -150,26 +149,26 @@ while True:
     opt = int(input("Ingrese una opcion: "))
     if opt == 1:
         
-        if elegirPokemonCompanero():
-            subMenu()
+        if elegir_pokemon_companero():
+            sub_menu()
             opt1 = int(input("Ingrese una opcion: "))
             if opt1 == 1:
-                capturarPokemon()
+                capturar_pokemon()
                 pass
             elif opt1 == 2:
-                retarLiderGimnasio()
+                retar_lider_gimnasio()
                 pass
             else:
                 print("Opcion no valida")
             
     elif opt == 2:
-        aplicarObjeto()
+        aplicar_objeto()
         pass
     elif opt == 3:
-        comprarObjeto()
+        comprar_objeto()
         pass
     elif opt == 4:
-        verPokedex()
+        ver_pokedex()
         pass
     elif opt == 5:
         print("Chau aguante digimon")

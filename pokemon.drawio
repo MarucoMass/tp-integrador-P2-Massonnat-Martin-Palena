@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Página-1" id="fg697A6MTHWbqzjaUPer">
-        <mxGraphModel dx="493" dy="268" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="783" dy="416" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -13,7 +13,7 @@
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="55MPb7F4AEdg9HZ-oGf9-1" vertex="1">
                     <mxGeometry y="190" width="320" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="55MPb7F4AEdg9HZ-oGf9-4" value="+ agregarPokemon(pokemon: Pokemon)&lt;div&gt;+ capturarPokemon(pokemon: Pokemon)&lt;br&gt;&lt;div&gt;+ elegirPokemon(index:int)&lt;/div&gt;&lt;div&gt;+ removerPokemon(pokemon: Pokemon)&lt;/div&gt;&lt;div&gt;+ usarObjeto(objeto: Objeto, indice_pokemon: int)&lt;/div&gt;&lt;div&gt;&lt;u&gt;+ validarNombre()&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;+ incrementarId()&lt;/u&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ agregarMedallas(medalla: Medalla)&lt;/div&gt;&lt;div&gt;+ dueloGimnasio(gimnasio: Gimnasio)&lt;/div&gt;&lt;div&gt;+ agregarObjeto(objeto: Objeto)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="55MPb7F4AEdg9HZ-oGf9-1" vertex="1">
+                <mxCell id="55MPb7F4AEdg9HZ-oGf9-4" value="+ agregar_pokemon(pokemon: Pokemon)&lt;div&gt;+ capturar_pokemon(pokemon: Pokemon)&lt;br&gt;&lt;div&gt;+ elegir_pokemon(index:int)&lt;/div&gt;&lt;div&gt;+ remover_pokemon(pokemon: Pokemon)&lt;/div&gt;&lt;div&gt;+ usar_objeto(indice_objeto: int, indice_pokemon: int)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ agregar_medallas(medalla: Medalla)&lt;/div&gt;&lt;div&gt;+ agregar_objeto(objeto: Objeto)&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;u style=&quot;border-color: var(--border-color);&quot;&gt;- validar_nombre()&lt;/u&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;u style=&quot;border-color: var(--border-color);&quot;&gt;- incrementar_id()&lt;/u&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="55MPb7F4AEdg9HZ-oGf9-1" vertex="1">
                     <mxGeometry y="198" width="320" height="152" as="geometry"/>
                 </mxCell>
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-5" value="Pokemon" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -25,7 +25,7 @@
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="55MPb7F4AEdg9HZ-oGf9-5" vertex="1">
                     <mxGeometry y="180" width="250" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="55MPb7F4AEdg9HZ-oGf9-8" value="+ recibirAtaque(danio: int)&amp;nbsp;&lt;div&gt;+ agregarHabilidad(habilidad:Habilidad)&lt;/div&gt;&lt;div&gt;+ subirNivel()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="55MPb7F4AEdg9HZ-oGf9-5" vertex="1">
+                <mxCell id="55MPb7F4AEdg9HZ-oGf9-8" value="+ recibir_ataque(danio: int)&amp;nbsp;&lt;div&gt;+ agregar_habilidad(habilidad:Habilidad)&lt;/div&gt;&lt;div&gt;+ subir_nivel()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="55MPb7F4AEdg9HZ-oGf9-5" vertex="1">
                     <mxGeometry y="188" width="250" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-13" value="Pokedex" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -39,7 +39,7 @@
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="55MPb7F4AEdg9HZ-oGf9-13" vertex="1">
                     <mxGeometry y="60" width="250" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="55MPb7F4AEdg9HZ-oGf9-16" value="+ agregarPokemon(pokemon: Pokemon)&lt;div&gt;+ buscarPokemon(pokemon: Pokemon)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="55MPb7F4AEdg9HZ-oGf9-13" vertex="1">
+                <mxCell id="55MPb7F4AEdg9HZ-oGf9-16" value="+ agregar_pokemon(pokemon: Pokemon)&lt;div&gt;+ buscar_pokemon(pokemon: Pokemon)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="55MPb7F4AEdg9HZ-oGf9-13" vertex="1">
                     <mxGeometry y="68" width="250" height="52" as="geometry"/>
                 </mxCell>
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-17" value="Habilidad" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -55,7 +55,7 @@
                     <mxGeometry y="78" width="200" height="32" as="geometry"/>
                 </mxCell>
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-21" value="Medalla" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="375" y="774" width="230" height="104" as="geometry"/>
+                    <mxGeometry x="390" y="774" width="230" height="104" as="geometry"/>
                 </mxCell>
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-22" value="- nombre: str {readonly}&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="55MPb7F4AEdg9HZ-oGf9-21" vertex="1">
                     <mxGeometry y="26" width="230" height="44" as="geometry"/>
@@ -97,17 +97,17 @@
                     <mxGeometry x="490" y="320" width="30" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-48" value="&amp;nbsp;0..*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="480" y="744" width="40" height="30" as="geometry"/>
+                    <mxGeometry x="520" y="744" width="40" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-49" value="*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="475" y="700" width="30" height="30" as="geometry"/>
+                    <mxGeometry x="525" y="700" width="30" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="55MPb7F4AEdg9HZ-oGf9-51" value="" style="endArrow=open;endFill=0;endSize=12;html=1;rounded=0;" parent="1" edge="1">
+                <mxCell id="55MPb7F4AEdg9HZ-oGf9-51" value="" style="endArrow=open;endFill=0;endSize=12;html=1;rounded=0;exitX=0.47;exitY=0.997;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
-                        <mxPoint x="480" y="700" as="sourcePoint"/>
-                        <mxPoint x="480" y="770" as="targetPoint"/>
+                        <mxPoint x="508.39999999999986" y="699.5440000000001" as="sourcePoint"/>
+                        <mxPoint x="508" y="770" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="480" y="720"/>
+                            <mxPoint x="508" y="720"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -169,7 +169,7 @@
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-66" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;&amp;nbsp;calcularProbabilidadCaptura(nivel) -&amp;gt; bool&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="40" y="418" width="270" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" style="edgeStyle=none;html=1;endArrow=open;endFill=0;entryX=1.018;entryY=0.871;entryDx=0;entryDy=0;entryPerimeter=0;rounded=0;" edge="1" parent="1" source="2" target="6">
+                <mxCell id="24" style="edgeStyle=none;html=1;endArrow=open;endFill=0;entryX=1.018;entryY=0.871;entryDx=0;entryDy=0;entryPerimeter=0;rounded=0;" parent="1" source="2" target="6" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="165" y="520" as="targetPoint"/>
                         <Array as="points">
@@ -177,32 +177,32 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="2" value="Gimnasio" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="50" y="646" width="230" height="240" as="geometry"/>
+                <mxCell id="2" value="Gimnasio" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="650" width="270" height="240" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="- nombre: str {readonly}&lt;div&gt;- entrenador: Entrenador {readonly}&lt;/div&gt;&lt;div&gt;- medalla: Medalla {readonly}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2">
-                    <mxGeometry y="26" width="230" height="94" as="geometry"/>
+                <mxCell id="3" value="- nombre: str {readonly}&lt;div&gt;- entrenador: Entrenador {readonly}&lt;/div&gt;&lt;div&gt;- medalla: Medalla {readonly}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="2" vertex="1">
+                    <mxGeometry y="26" width="270" height="94" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="2">
-                    <mxGeometry y="120" width="230" height="8" as="geometry"/>
+                <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="2" vertex="1">
+                    <mxGeometry y="120" width="270" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="+ __str__ () -&amp;gt; str&lt;br&gt;+ pokemon_entrenador()&lt;br&gt;+ agregarMedalla()&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="2">
-                    <mxGeometry y="128" width="230" height="112" as="geometry"/>
+                <mxCell id="5" value="+ __str__ () -&amp;gt; str&lt;br&gt;+ pokemon_entrenador()&lt;br&gt;+ duelo_pokemon(entrendador: Entrendador)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="2" vertex="1">
+                    <mxGeometry y="128" width="270" height="112" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="6" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="300" y="554" width="30" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="" style="edgeStyle=none;html=1;entryX=0.975;entryY=1.044;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=open;endFill=0;" edge="1" parent="1" source="5" target="8">
+                <mxCell id="7" value="" style="edgeStyle=none;html=1;entryX=-0.014;entryY=0.742;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=open;endFill=0;" parent="1" source="5" target="55MPb7F4AEdg9HZ-oGf9-22" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="345" y="800" width="30" height="30" as="geometry"/>
+                <mxCell id="8" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="800" width="30" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="280" y="800" width="30" height="30" as="geometry"/>
+                <mxCell id="9" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="800" width="30" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="25" value="&amp;nbsp;0..*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="155" y="616" width="40" height="30" as="geometry"/>
+                <mxCell id="25" value="&amp;nbsp;0..*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="616" width="40" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

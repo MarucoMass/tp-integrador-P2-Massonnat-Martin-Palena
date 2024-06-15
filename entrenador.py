@@ -75,25 +75,25 @@ class Entrenador:
     def cant_objetos(self):
         return len(self.objetos)
     
-    def agregarPokemon(self, pokemon: Pokemon)-> None:
+    def agregar_pokemon(self, pokemon: Pokemon)-> None:
         self.equipo.append(pokemon)
         
         #self.pokedex.agregar_pokemon(pokemon)
 
-    def removerPokemon(self, pokemon: Pokemon) -> None:
+    def remover_pokemon(self, pokemon: Pokemon) -> None:
         self.equipo.remove(pokemon)
 
-    def capturarPokemon(self, pokemon: Pokemon) -> bool:
+    def capturar_pokemon(self, pokemon: Pokemon) -> bool:
         if calcular_probabilidad(pokemon.nivel) and len(self.equipo) < 5 :
-            self.agregarPokemon(pokemon)    
+            self.agregar_pokemon(pokemon)    
                 # self.pokedex.agregar_pokemon(pokemon)
             return True
         return False
 
-    def elegirPokemon(self, index: int):
+    def elegir_pokemon(self, index: int):
         self.default_pokemon = self.equipo[index]
 
-    def usarObjeto(self, indice_objeto: int, indice_pokemon: int) -> bool:
+    def usar_objeto(self, indice_objeto: int, indice_pokemon: int) -> bool:
         objeto = self.objetos[indice_objeto]
         pokemon = self.equipo[indice_pokemon]
 
@@ -114,10 +114,10 @@ class Entrenador:
                 objeto_usado = self.objetos.pop(indice_objeto)
                 return objeto_usado
         
-    def agregarObjeto(self, objeto: Objeto)->None:
+    def agregar_objeto(self, objeto: Objeto)->None:
         self.objetos.append(objeto)
 
-    def agregarMedalla(self, medalla:Medalla)->None:
+    def agregar_medalla(self, medalla:Medalla)->None:
         self.medallas.append(medalla)
 
     def __str__(self) -> str:

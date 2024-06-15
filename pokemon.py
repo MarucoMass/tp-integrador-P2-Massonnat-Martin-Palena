@@ -65,7 +65,7 @@ class Pokemon:
     #     pass
     # Metodos
 
-    def recibirAtaque(self, dano: int):
+    def recibir_ataque(self, dano: int):
         self.salud -= dano
         if self.salud < 0:
             self.salud = 0

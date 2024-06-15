@@ -61,18 +61,18 @@ lista_objetos = [
     Objeto("Armadura Maltida","evolutivo", 2)
     ]
 
-lista_entrenadores[0].agregarPokemon(lista_pokemons[0])
-lista_entrenadores[0].agregarPokemon(lista_pokemons[1])
+lista_entrenadores[0].agregar_pokemon(lista_pokemons[0])
+lista_entrenadores[0].agregar_pokemon(lista_pokemons[1])
 
-lista_entrenadores[1].agregarPokemon(lista_pokemons[15])
-lista_entrenadores[1].agregarPokemon(lista_pokemons[17])
+lista_entrenadores[1].agregar_pokemon(lista_pokemons[15])
+lista_entrenadores[1].agregar_pokemon(lista_pokemons[17])
 
-lista_entrenadores[2].agregarPokemon(lista_pokemons[18])
-lista_entrenadores[2].agregarPokemon(lista_pokemons[19])
+lista_entrenadores[2].agregar_pokemon(lista_pokemons[18])
+lista_entrenadores[2].agregar_pokemon(lista_pokemons[19])
 
 #lista_entrenadores[0].elegirPokemon(0)
-lista_entrenadores[1].elegirPokemon(0)
-lista_entrenadores[2].elegirPokemon(0)
+lista_entrenadores[1].elegir_pokemon(0)
+lista_entrenadores[2].elegir_pokemon(0)
 
 lista_pokemons[0].agregar_habilidad(Habilidad("Chispa", 30))
 lista_pokemons[0].agregar_habilidad(Habilidad("Imapct Trueno", 50))
@@ -90,6 +90,6 @@ lista_gimnasios = [
                 ]
 
 
-lista_entrenadores[0].agregarObjeto(lista_objetos[3])
+lista_entrenadores[0].agregar_objeto(lista_objetos[3])
 
 

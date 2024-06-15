@@ -24,10 +24,10 @@ class Gimnasio():
     
     #METODOS
     
-    def pokemonEntrenador(self):
+    def pokemon_entrenador(self):
         return self.entrenador.default_pokemon.nivel
     
-    def dueloPokemon(self, entrenador: Entrenador):
+    def duelo_pokemon(self, entrenador: Entrenador):
         return self.entrenador.default_pokemon.nivel - entrenador.default_pokemon.nivel
     
     def __str__(self) -> str:

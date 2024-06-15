@@ -16,7 +16,7 @@ class Pokedex:
         if pokemon in self.pokemons:
             return pokemon
         else:
-            return "No se encontro ese pokemon"
+            return "No se encontró ese pokemon"
         
         
 
