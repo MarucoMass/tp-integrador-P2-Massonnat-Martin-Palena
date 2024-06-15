@@ -53,19 +53,13 @@ class Pokemon:
     def defensa(self, new_defensa):
         self.__defensa = new_defensa
     
-
     @property
     def habilidades(self) -> list:
         return self.__habilidades
 
-    def salud():
-        pass
+    """def ataque_base():
+        pass"""
 
-    def ataque_base():
-        pass
-
-    def defensa():
-        pass
 
     # Metodos
 
@@ -75,5 +69,8 @@ class Pokemon:
     def agregar_habilidad(self, habilidad: Habilidad):
         self.habilidades.append(habilidad)
 
-    def subir_nivel(self):
-        self.nivel += 1
+    def subir_nivel(self, niveles):
+        self.nivel += niveles
+        
+    def __str__(self) -> str:
+        return f"{self.nombre} Vida: {self.salud}"

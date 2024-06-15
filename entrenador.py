@@ -1,6 +1,6 @@
 from pokemon import Pokemon
 from pokedex import Pokedex
-from probabilidad_captura import calcular_probabilidad_captura
+from calcular_probabilidad import calcular_probabilidad
 from objeto import Objeto
 from medalla import Medalla
 
@@ -9,13 +9,13 @@ class Entrenador:
     __id_entrenador_autoincrement = int(0)
     __validar_nombres = []
 
-    def __init__(self, nombre: str, pokedex: Pokedex, default_pokemon:Pokemon):
+    def __init__(self, nombre: str, pokedex: Pokedex):
         self.__nombre = Entrenador.validarNombre(nombre)
         self.__id_entrenador: int = Entrenador.id_autoincrement()
         self.__equipo: list = []
         self.__objetos: list = []
         self.__medallas: list = []
-        self.__default_pokemon = default_pokemon # HAY QUE VER ESTO.ACA PUSIMOS ASI PORQUE CUANDO QUERIAMOS RETAR A OTRO SE QUEDABA ESTO EN NONE Y NO PODIA SEGUIR
+        self.__default_pokemon = None # HAY QUE VER ESTO.ACA PUSIMOS ASI PORQUE CUANDO QUERIAMOS RETAR A OTRO SE QUEDABA ESTO EN NONE Y NO PODIA SEGUIR
         self.__pokedex = pokedex
 
     @property
@@ -25,7 +25,7 @@ class Entrenador:
     @default_pokemon.setter
     def default_pokemon(self, value):
         if value in self.equipo:
-            self._default_pokemon = value
+            self.__default_pokemon = value
         else:
             raise ValueError("El Pokémon debe estar en el equipo del entrenador.")
 
@@ -76,7 +76,7 @@ class Entrenador:
         self.equipo.remove(pokemon)
 
     def capturarPokemon(self, pokemon: Pokemon) -> bool:
-        if calcular_probabilidad_captura(pokemon.nivel):
+        if calcular_probabilidad(pokemon.nivel):
             self.agregarPokemon(pokemon)
             # self.pokedex.agregar_pokemon(pokemon)
             return True
@@ -89,19 +89,25 @@ class Entrenador:
         objeto = self.objetos[indice_objeto]
         pokemon = self.equipo[indice_pokemon]
 
-        if objeto.nombre == "Pocion":
+        if objeto.tipo == "curativo":
             if pokemon.salud < 100:
-                pokemon.salud = min(100, pokemon.salud + 10)
+                pokemon.salud = min(100, pokemon.salud + objeto.efecto)
                 objeto_usado = self.objetos.pop(indice_objeto)
                 return objeto_usado
 
-        elif objeto.nombre == "Piedra Evolutiva":
-            pokemon.subirNivel()
+        elif objeto.tipo == "evolutivo":
+            pokemon.subirNivel(objeto.efecto)
             objeto_usado = self.objetos.pop(indice_objeto)
             return objeto_usado
         
+        elif objeto.tipo == "defensivo":
+            if pokemon.defensa < 50:
+                pokemon.defensa = min(50, pokemon.defensa + objeto.efecto)
+                objeto_usado = self.objetos.pop(indice_objeto)
+                return objeto_usado
+        
     def agregarObjeto(self, objeto: Objeto)->None:
-        self.objeto.append(objeto)
+        self.objetos.append(objeto)
 
     def agregarMedalla(self, medalla:Medalla)->None:
         self.medallas.append(medalla)

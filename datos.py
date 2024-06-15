@@ -5,9 +5,7 @@ from gimnasio import *
 from medalla import *
 from habilidad import *
 from objeto import *
-from probabilidad_captura import calcular_probabilidad_captura
-
-
+from calcular_probabilidad import calcular_probabilidad
 
 
 
@@ -44,9 +42,9 @@ lista_pokedex[1].agregar_pokemon(lista_pokemons[7])
 
 
 lista_entrenadores = [
-    Entrenador("Maximus", lista_pokedex[0], lista_pokemons[0]), 
-    Entrenador("Aurelio", lista_pokedex[1], lista_pokemons[15]), 
-    Entrenador("Blackets", lista_pokedex[2], lista_pokemons[17])
+    Entrenador("Maximus", lista_pokedex[0]), 
+    Entrenador("Aurelio", lista_pokedex[1]), 
+    Entrenador("Blackets", lista_pokedex[2])
     ]
 
 lista_medallas = [
@@ -55,9 +53,12 @@ lista_medallas = [
     ]
 
 lista_objetos = [
-    Objeto("Pocion", "Curativo", "+20HP"), 
-    Objeto("Piedra Lunar", "Objeto Evolutivo", "+50XP" ),
-    Objeto("Bayas", "Defensivo", "+30DEF")
+    Objeto("Pocion", "curativo", 20), 
+    Objeto("Piedra Lunar", "evolutivo", 1),
+    Objeto("Bayas", "defensivo", 10),
+    Objeto('Pocion Superior', 'curativo', 50),
+    Objeto("Chaleco asalto","defensivo", 30),
+    Objeto("Armadura Maltida","evolutivo", 2)
     ]
 
 lista_entrenadores[0].agregarPokemon(lista_pokemons[0])
@@ -69,9 +70,9 @@ lista_entrenadores[1].agregarPokemon(lista_pokemons[17])
 lista_entrenadores[2].agregarPokemon(lista_pokemons[18])
 lista_entrenadores[2].agregarPokemon(lista_pokemons[19])
 
-# lista_entrenadores[0].elegirPokemon(0)
-# lista_entrenadores[1].elegirPokemon(0)
-# lista_entrenadores[2].elegirPokemon(0)
+#lista_entrenadores[0].elegirPokemon(0)
+lista_entrenadores[1].elegirPokemon(0)
+lista_entrenadores[2].elegirPokemon(0)
 
 lista_pokemons[0].agregar_habilidad(Habilidad("Chispa", 30))
 lista_pokemons[0].agregar_habilidad(Habilidad("Imapct Trueno", 50))
@@ -89,6 +90,6 @@ lista_gimnasios = [
                 ]
 
 
-
+lista_entrenadores[0].agregarObjeto(lista_objetos[3])
 
 
