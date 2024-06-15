@@ -66,19 +66,27 @@ class Entrenador:
         return nombre
 
     # METODOS
-
+    
+    @property
+    def cant_pokemons_pokedex(self):
+        return len(self.pokedex.pokemons)
+        
+    @property
+    def cant_objetos(self):
+        return len(self.objetos)
+    
     def agregarPokemon(self, pokemon: Pokemon)-> None:
-        if len(self.equipo) < 5:
-            self.equipo.append(pokemon)
-        self.pokedex.agregar_pokemon(pokemon)
+        self.equipo.append(pokemon)
+        
+        #self.pokedex.agregar_pokemon(pokemon)
 
     def removerPokemon(self, pokemon: Pokemon) -> None:
         self.equipo.remove(pokemon)
 
     def capturarPokemon(self, pokemon: Pokemon) -> bool:
-        if calcular_probabilidad(pokemon.nivel):
-            self.agregarPokemon(pokemon)
-            # self.pokedex.agregar_pokemon(pokemon)
+        if calcular_probabilidad(pokemon.nivel) and len(self.equipo) < 5 :
+            self.agregarPokemon(pokemon)    
+                # self.pokedex.agregar_pokemon(pokemon)
             return True
         return False
 

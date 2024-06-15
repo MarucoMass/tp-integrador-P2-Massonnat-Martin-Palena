@@ -32,6 +32,9 @@ def entrenadorPrincipal():
 
 def capturarPokemon():
     pokemon_random = random.randint(0, len(lista_pokemons)-1)
+    if lista_pokemons[pokemon_random] not in entrenadorPrincipal().pokedex.pokemons:
+        entrenadorPrincipal().pokedex.agregar_pokemon(lista_pokemons[pokemon_random])
+        
     print(f"Te has encontrado con un {lista_pokemons[pokemon_random].nombre} salvaje!\nQuieres capturarlo? 1-Si 2-No")
     opt = int(input("Toma una decision: "))
     if opt == 1:
@@ -68,7 +71,7 @@ def retarLiderGimnasio():
         print("Antes de luchar debes elegir tu pokemon")
 
 def aplicarObjeto():
-    if len(entrenadorPrincipal().objetos) > 0:
+    if (entrenadorPrincipal().cant_objetos) > 0:
         for i,objeto in enumerate(entrenadorPrincipal().objetos ,1):
             print(f"{i} {objeto}")
         
