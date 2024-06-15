@@ -1,1 +1,1 @@
-ent1.pokemon_elegido(0)
+            

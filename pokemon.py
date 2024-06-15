@@ -60,11 +60,15 @@ class Pokemon:
     """def ataque_base():
         pass"""
 
-
+    # def salud(self, salud_base, danio):
+    #     self.salud = self.salud - danio
+    #     pass
     # Metodos
 
-    def recibir_ataque(self, dano: int):
+    def recibirAtaque(self, dano: int):
         self.salud -= dano
+        if self.salud < 0:
+            self.salud = 0
 
     def agregar_habilidad(self, habilidad: Habilidad):
         self.habilidades.append(habilidad)

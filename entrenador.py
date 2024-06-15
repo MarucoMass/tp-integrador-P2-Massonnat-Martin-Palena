@@ -10,8 +10,8 @@ class Entrenador:
     __validar_nombres = []
 
     def __init__(self, nombre: str, pokedex: Pokedex):
-        self.__nombre = Entrenador.validarNombre(nombre)
-        self.__id_entrenador: int = Entrenador.id_autoincrement()
+        self.__nombre = Entrenador.__validarNombre(nombre)
+        self.__id_entrenador: int = Entrenador.__id_autoincrement()
         self.__equipo: list = []
         self.__objetos: list = []
         self.__medallas: list = []
@@ -54,12 +54,12 @@ class Entrenador:
         return self.__pokedex
 
     @classmethod
-    def id_autoincrement(cls):
+    def __id_autoincrement(cls):
         cls.__id_entrenador_autoincrement += 1
         return cls.__id_entrenador_autoincrement
 
     @classmethod
-    def validarNombre(cls, nombre):
+    def __validarNombre(cls, nombre):
         if nombre in cls.__validar_nombres:
             return False
         cls.__validar_nombres.append(nombre)
@@ -96,7 +96,7 @@ class Entrenador:
                 return objeto_usado
 
         elif objeto.tipo == "evolutivo":
-            pokemon.subirNivel(objeto.efecto)
+            pokemon.subir_nivel(objeto.efecto)
             objeto_usado = self.objetos.pop(indice_objeto)
             return objeto_usado
         
