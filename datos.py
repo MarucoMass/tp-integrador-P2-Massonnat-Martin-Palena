@@ -43,15 +43,35 @@ lista_pokedex[1].agregar_pokemon(lista_pokemons[8])
 lista_pokedex[1].agregar_pokemon(lista_pokemons[7])
 
 
-lista_entrenadores = [Entrenador("Maximus", lista_pokedex[0]), Entrenador("Aurelio", lista_pokedex[1]), Entrenador("Blackets", lista_pokedex[2])]
+lista_entrenadores = [
+    Entrenador("Maximus", lista_pokedex[0], lista_pokemons[0]), 
+    Entrenador("Aurelio", lista_pokedex[1], lista_pokemons[15]), 
+    Entrenador("Blackets", lista_pokedex[2], lista_pokemons[17])
+    ]
 
-lista_medallas = [Medalla("Medalla Roca"), Medalla("Medalla Rayo")]
+lista_medallas = [
+    Medalla("Medalla Roca"), 
+    Medalla("Medalla Rayo")
+    ]
 
-lista_objetos = [Objeto("Pocion", "Curativo", "+20HP"), Objeto("Piedra Lunar", "Objeto Evolutivo", "+50XP" ), Objeto("Bayas", "Defensivo", "+30DEF")]
+lista_objetos = [
+    Objeto("Pocion", "Curativo", "+20HP"), 
+    Objeto("Piedra Lunar", "Objeto Evolutivo", "+50XP" ),
+    Objeto("Bayas", "Defensivo", "+30DEF")
+    ]
 
-lista_entrenadores[0].elegirPokemon(lista_pokemons[0])
-lista_entrenadores[1].elegirPokemon(lista_pokemons[15])
-lista_entrenadores[2].elegirPokemon(lista_pokemons[18])
+lista_entrenadores[0].agregarPokemon(lista_pokemons[0])
+lista_entrenadores[0].agregarPokemon(lista_pokemons[1])
+
+lista_entrenadores[1].agregarPokemon(lista_pokemons[15])
+lista_entrenadores[1].agregarPokemon(lista_pokemons[17])
+
+lista_entrenadores[2].agregarPokemon(lista_pokemons[18])
+lista_entrenadores[2].agregarPokemon(lista_pokemons[19])
+
+# lista_entrenadores[0].elegirPokemon(0)
+# lista_entrenadores[1].elegirPokemon(0)
+# lista_entrenadores[2].elegirPokemon(0)
 
 lista_pokemons[0].agregar_habilidad(Habilidad("Chispa", 30))
 lista_pokemons[0].agregar_habilidad(Habilidad("Imapct Trueno", 50))
@@ -63,7 +83,10 @@ lista_pokemons[2].agregar_habilidad(Habilidad("Placaje", 30))
 lista_pokemons[2].agregar_habilidad(Habilidad("Latigo Cepa", 80))
 
 
-lista_gimnasios = [Gimnasio("La Roca", lista_entrenadores[1], lista_medallas[0]),Gimnasio("El Rayo", lista_entrenadores[2], lista_medallas[1])]
+lista_gimnasios = [
+                Gimnasio("La Roca", lista_entrenadores[1], lista_medallas[0]),
+                Gimnasio("El Rayo", lista_entrenadores[2], lista_medallas[1])
+                ]
 
 
 

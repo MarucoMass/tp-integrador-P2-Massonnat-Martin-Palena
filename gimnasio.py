@@ -27,6 +27,9 @@ class Gimnasio():
     def pokemonEntrenador(self):
         return self.entrenador.default_pokemon.nivel
     
+    def dueloPokemon(self, entrenador: Entrenador):
+        return self.entrenador.default_pokemon.nivel - entrenador.default_pokemon.nivel
+    
     def __str__(self) -> str:
         return f"Gimnasio: {self.nombre}, El lider del gimnasio es: {self.entrenador.nombre}"
     

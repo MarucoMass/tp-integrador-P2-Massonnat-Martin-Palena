@@ -31,8 +31,8 @@ def entrenadorPrincipal():
     return lista_entrenadores[0]
 
 def capturarPokemon():
-    pokemon_random = random.randint(0, len(lista_pokemons))
-    print(f"Te has encotrado con un {lista_pokemons[pokemon_random].nombre} salvaje!\nQuieres capturarlo? 1-Si 2-No")
+    pokemon_random = random.randint(0, len(lista_pokemons)-1)
+    print(f"Te has encontrado con un {lista_pokemons[pokemon_random].nombre} salvaje!\nQuieres capturarlo? 1-Si 2-No")
     opt = int(input("Toma una decision: "))
     if opt == 1:
         if entrenadorPrincipal().capturarPokemon(lista_pokemons[pokemon_random]):
@@ -46,7 +46,18 @@ def capturarPokemon():
     
 
 def retarLiderGimnasio():
-    pass
+    for index, gimnasio in enumerate(lista_gimnasios, 1):
+        print(f"{index} - {gimnasio}")
+
+    opt = int(input("Que gimnasio desea retar?"))
+
+    gimnasio_seleccionado = lista_gimnasios[opt-1]
+
+    if calcular_probabilidad_captura(gimnasio_seleccionado.dueloPokemon(entrenadorPrincipal())):
+        entrenadorPrincipal().agregarMedalla(lista_gimnasios[opt-1].medalla)
+        print("Ganaste")
+    else:
+        print("Perdiste")
 
 def aplicarObjeto():
     pass
@@ -55,7 +66,8 @@ def comprarObjeto():
     pass
 
 def verPokedex():
-    pass
+    for pokemon in entrenadorPrincipal().pokedex.pokemons:
+        print(f"{pokemon.nombre} - Nivel: {pokemon.nivel}")
 
 
 

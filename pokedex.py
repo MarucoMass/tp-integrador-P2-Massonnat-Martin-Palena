@@ -17,3 +17,6 @@ class Pokedex:
             return pokemon
         else:
             return "No se encontro ese pokemon"
+        
+        
+
