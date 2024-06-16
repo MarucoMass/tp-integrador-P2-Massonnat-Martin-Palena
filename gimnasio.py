@@ -31,7 +31,7 @@ class Gimnasio():
         return self.entrenador.default_pokemon.nivel - entrenador.default_pokemon.nivel
     
     def __str__(self) -> str:
-        return f"Gimnasio: {self.nombre}, El lider del gimnasio es: {self.entrenador.nombre}"
+        return f"|Gimnasio: {self.nombre}, El lider del gimnasio es: {self.entrenador.nombre}|"
     
         
         

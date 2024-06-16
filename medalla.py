@@ -12,4 +12,4 @@ class Medalla:
 
 
     def __str__(self) -> str:
-        return f"Medalla: {self.nombre}"
+        return f"|Medalla: {self.nombre}|"

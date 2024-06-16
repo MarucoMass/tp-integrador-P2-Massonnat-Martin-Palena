@@ -20,4 +20,4 @@ class Habilidad:
         self.__dano = new_dano
 
     def __str__(self) -> str:
-        return f"Habilidad: {self.nombre}/Daño: {self.dano}"
+        return f"|Habilidad: {self.nombre} / Daño: {self.dano}|"

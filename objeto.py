@@ -36,4 +36,4 @@ class Objeto:
         self.__efecto = new_efecto
 
     def __str__(self) -> str:
-        return f"{self.nombre} Tipo: {self.tipo} Efecto: {self.efecto}"
+        return f"|{self.nombre} \ Tipo: {self.tipo} \ Efecto: {self.efecto}|"

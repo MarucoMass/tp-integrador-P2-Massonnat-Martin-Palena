@@ -3,15 +3,17 @@ from habilidad import Habilidad
 
 class Pokemon:
 
-    def __init__(self, nombre: str, nivel: int, tipo: str, salud: int, ataque_base: int, defensa: int):
+    def __init__(self, nombre: str, nivel: int, tipo: str, salud_base: int, ataque_base: int, defensa_base: int):
         self.__nombre = nombre
         self.__nivel = nivel
         self.__tipo = tipo
-        self.__salud = salud
+        self.__salud_base = salud_base
+        self.__salud_actual = salud_base
+        self.__defensa_base = defensa_base
+        self.__defensa_actual = defensa_base
         self.__ataque_base = ataque_base
-        self.__defensa = defensa
         self.__habilidades = []
-        self.__ataque_con_habilidad = None
+
 
     @property
     def nombre(self) -> str:
@@ -30,12 +32,28 @@ class Pokemon:
         self.__nivel = new_nivel
 
     @property
-    def salud(self):
-        return self.__salud
+    def salud_base(self):
+        return self.__salud_base
+        
+    @property
+    def salud_actual(self,):
+        return self.__salud_actual
+        
+    @salud_actual.setter
+    def salud_actual(self, new_salud):
+        self.__salud_actual = new_salud
+        
+    @property
+    def defensa_base(self):
+        return self.__defensa_base
     
-    @salud.setter
-    def salud(self, new_salud):
-        self.__salud = new_salud
+    @property
+    def defensa_actual(self):
+        return self.__defensa_actual
+    
+    @defensa_actual.setter
+    def defensa_actual(self, new_defensa):
+        self.__defensa_actual = new_defensa
         
     @property
     def ataque_base(self):
@@ -45,14 +63,6 @@ class Pokemon:
     def ataque_base(self, new_ataque_base):
         self.__ataque_base = new_ataque_base
         
-    @property
-    def defensa(self):
-        return self.__defensa
-    
-    @defensa.setter
-    def defensa(self, new_defensa):
-        self.__defensa = new_defensa
-    
     @property
     def habilidades(self) -> list:
         return self.__habilidades
@@ -66,9 +76,9 @@ class Pokemon:
     # Metodos
 
     def recibir_ataque(self, dano: int):
-        self.salud -= dano
-        if self.salud < 0:
-            self.salud = 0
+        self.salud_actual -= dano
+        if self.salud_actual < 0:
+            self.salud_actual = 0
 
     def agregar_habilidad(self, habilidad: Habilidad):
         self.habilidades.append(habilidad)
@@ -77,4 +87,4 @@ class Pokemon:
         self.nivel += niveles
         
     def __str__(self) -> str:
-        return f"{self.nombre} Vida: {self.salud}"
+        return f"|{self.nombre} \ Vida: {self.salud_actual} \ Defensa: {self.defensa_actual}|"

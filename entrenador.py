@@ -98,8 +98,8 @@ class Entrenador:
         pokemon = self.equipo[indice_pokemon]
 
         if objeto.tipo == "curativo":
-            if pokemon.salud < 100:
-                pokemon.salud = min(100, pokemon.salud + objeto.efecto)
+            if pokemon.salud_actual < pokemon.salud_base:
+                pokemon.salud_actual = min(pokemon.salud_base, pokemon.salud_actual + objeto.efecto)
                 objeto_usado = self.objetos.pop(indice_objeto)
                 return objeto_usado
 
@@ -109,8 +109,8 @@ class Entrenador:
             return objeto_usado
         
         elif objeto.tipo == "defensivo":
-            if pokemon.defensa < 50:
-                pokemon.defensa = min(50, pokemon.defensa + objeto.efecto)
+            if pokemon.defensa_actual < pokemon.defensa_base:
+                pokemon.defensa_actual = min(pokemon.defensa_base, pokemon.defensa_actual + objeto.efecto)
                 objeto_usado = self.objetos.pop(indice_objeto)
                 return objeto_usado
         
