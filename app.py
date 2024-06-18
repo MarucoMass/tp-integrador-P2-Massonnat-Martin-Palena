@@ -37,20 +37,25 @@ def capturar_pokemon():
 def retar_lider_gimnasio():
     system("cls")
     if entrenador_principal().default_pokemon != None:
-        for index, gimnasio in enumerate(lista_gimnasios, 1):
-            print(f"{index} - {gimnasio}")
+        if len(lista_gimnasios) > 0:
+            for index, gimnasio in enumerate(lista_gimnasios, 1):
+                print(f"{index} - {gimnasio} - {gimnasio.medalla}")
 
-        opt = int(input("Que gimnasio desea retar? "))
+            opt = int(input("Que gimnasio desea retar? "))
 
-        gimnasio_seleccionado = lista_gimnasios[opt-1]
+            gimnasio_seleccionado = lista_gimnasios[opt-1]
 
-        if calcular_probabilidad(gimnasio_seleccionado.duelo_pokemon(entrenador_principal())):
-            entrenador_principal().agregar_medalla(lista_gimnasios[opt-1].medalla)
-            print("Ganaste")
-            entrenador_principal().default_pokemon.recibir_ataque(gimnasio_seleccionado.entrenador.default_pokemon.ataque_base - entrenador_principal().default_pokemon.defensa_actual)
+            if calcular_probabilidad(gimnasio_seleccionado.duelo_pokemon(entrenador_principal())):
+                entrenador_principal().agregar_medalla(lista_gimnasios[opt-1].medalla)
+                gimnasio_seleccionado.remover_medalla()
+                lista_gimnasios.pop(opt-1)
+                print("Ganaste")
+                entrenador_principal().default_pokemon.recibir_ataque(gimnasio_seleccionado.entrenador.default_pokemon.ataque_base - entrenador_principal().default_pokemon.defensa_actual)
+            else:
+                print("Perdiste")
+                entrenador_principal().default_pokemon.salud_actual = 0
         else:
-            print("Perdiste")
-            entrenador_principal().default_pokemon.salud_actual = 0
+            print("Ya has conseguido derrotar a todos los lideres de gimnasio!")
     else:
         print("Antes de luchar debes elegir tu pokemon")
 
@@ -90,8 +95,11 @@ def comprar_objeto():
 
 def ver_pokedex():
     system("cls")
-    for pokemon in entrenador_principal().pokedex.pokemons:
-        print(f"{pokemon.nombre} - Nivel: {pokemon.nivel}")
+    if len(entrenador_principal().pokedex) > 0:
+        for pokemon in entrenador_principal().pokedex.pokemons:
+            print(f"{pokemon.nombre} - Nivel: {pokemon.nivel}")
+    else:
+        print("Tienes que salir a explorar para ver tu pokedex.")
 
 def ver_equipo():
     system("cls")
@@ -101,10 +109,25 @@ def ver_equipo():
         
 def ver_inventario():
     system("cls")
-    print("Tus objetos: ")
-    for i, objeto in enumerate(entrenador_principal().objetos, 1):
-        print(f"\t║{i} ➔ {objeto}║")
+    if len(entrenador_principal().objetos) > 0:
+        print("Tus objetos: ")
+        for i, objeto in enumerate(entrenador_principal().objetos, 1):
+            print(f"\t║{i} ➔ {objeto}║")
+    else:
+        print("Tu inventario esta vacio.")
 
+
+def ver_medallas():
+    system("cls")
+    if len(entrenador_principal().medallas) > 0:
+        print("Tus medallas son:")
+        for i, medalla in enumerate(entrenador_principal().medallas, 1):
+            print(f"\t║{i} ➔ {medalla}║")
+    else:
+        print("No tienes medallas por el momento.")
+        
+        
+        
 def elegir_pokemon_companero():
     system("cls")
     for i,pokemon in enumerate(entrenador_principal().equipo, 1):
@@ -133,7 +156,8 @@ def menu():
         ║ 4- Ver tu pokedex              ║
         ║ 5- Ver equipo                  ║
         ║ 6- Ver inventario              ║
-        ║ 7- Salir                       ║
+        ║ 7- Ver medallas                ║
+        ║ 8- Salir                       ║
         ╚════════════════════════════════╝""")
 
 def sub_menu():
@@ -180,6 +204,8 @@ while True:
         ver_inventario()
         pass
     elif opt == 7:
+        ver_medallas()
+    elif opt == 8:
         print("Chau aguante digimon")
         break
     else:

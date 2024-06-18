@@ -1,13 +1,13 @@
 <mxfile host="65bd71144e">
     <diagram name="Página-1" id="fg697A6MTHWbqzjaUPer">
-        <mxGraphModel dx="783" dy="416" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="893" dy="469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-1" value="Entrenador" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="330" y="350" width="320" height="350" as="geometry"/>
                 </mxCell>
-                <mxCell id="55MPb7F4AEdg9HZ-oGf9-2" value="- id: int {readonly, autoincrement}&lt;div&gt;- nombre: str {unique}&lt;/div&gt;&lt;div&gt;- equipo: list&lt;/div&gt;&lt;div&gt;- objetos: list&lt;/div&gt;&lt;div&gt;- medallas: set&lt;/div&gt;&lt;div&gt;- default_pokemon: Pokemon&lt;/div&gt;&lt;div&gt;- pokedex: Pokedex {readonly}&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- \ cant_pokemons&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;- \ cant_objetos&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;u&gt;- id_autoincrement&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;- lista_nombres&lt;/u&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="55MPb7F4AEdg9HZ-oGf9-1" vertex="1">
+                <mxCell id="55MPb7F4AEdg9HZ-oGf9-2" value="- id: int {readonly, autoincrement}&lt;div&gt;- nombre: str {unique}&lt;/div&gt;&lt;div&gt;- equipo: list&lt;/div&gt;&lt;div&gt;- objetos: list&lt;/div&gt;&lt;div&gt;- medallas: list&lt;/div&gt;&lt;div&gt;- default_pokemon: Pokemon&lt;/div&gt;&lt;div&gt;- pokedex: Pokedex {readonly}&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- \ cant_pokemons&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;- \ cant_objetos&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;u&gt;- id_autoincrement&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;- lista_nombres&lt;/u&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="55MPb7F4AEdg9HZ-oGf9-1" vertex="1">
                     <mxGeometry y="26" width="320" height="164" as="geometry"/>
                 </mxCell>
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="55MPb7F4AEdg9HZ-oGf9-1" vertex="1">
@@ -39,7 +39,7 @@
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="55MPb7F4AEdg9HZ-oGf9-13" vertex="1">
                     <mxGeometry y="60" width="250" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="55MPb7F4AEdg9HZ-oGf9-16" value="+ agregar_pokemon(pokemon: Pokemon)&lt;div&gt;+ buscar_pokemon(pokemon: Pokemon)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="55MPb7F4AEdg9HZ-oGf9-13" vertex="1">
+                <mxCell id="55MPb7F4AEdg9HZ-oGf9-16" value="+ agregar_pokemon(pokemon: Pokemon)&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="55MPb7F4AEdg9HZ-oGf9-13" vertex="1">
                     <mxGeometry y="68" width="250" height="52" as="geometry"/>
                 </mxCell>
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-17" value="Habilidad" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -186,7 +186,7 @@
                 <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="2" vertex="1">
                     <mxGeometry y="120" width="270" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="+ __str__ () -&amp;gt; str&lt;br&gt;+ pokemon_entrenador()&lt;br&gt;+ duelo_pokemon(entrendador: Entrendador)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="2" vertex="1">
+                <mxCell id="5" value="+ __str__ () -&amp;gt; str&lt;br&gt;+ pokemon_entrenador()&lt;br&gt;+ duelo_pokemon(entrendador: Entrendador)&lt;br&gt;+ remover_medalla()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="2" vertex="1">
                     <mxGeometry y="128" width="270" height="112" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
