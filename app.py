@@ -22,11 +22,11 @@ def capturar_pokemon():
     opt = int(input("Toma una decision: "))
     if opt == 1:
         if entrenador_principal().capturar_pokemon(lista_pokemons[pokemon_random]):
-            entrenador_principal().default_pokemon.recibir_ataque(lista_pokemons[pokemon_random].ataque_base - entrenador_principal().default_pokemon.defensa_actual)
+            entrenador_principal().default_pokemon.recibir_ataque(lista_pokemons[pokemon_random].habilidad.dano - entrenador_principal().default_pokemon.defensa_actual)
             print("Lo has logrado capturar!")   
         else:
             print(f"Oh no, el {lista_pokemons[pokemon_random].nombre} a huido!")
-            entrenador_principal().default_pokemon.recibir_ataque(lista_pokemons[pokemon_random].ataque_base)
+            entrenador_principal().default_pokemon.recibir_ataque(lista_pokemons[pokemon_random].habilidad.dano)
                 
     elif opt == 2:
         print("Has logrado escapar.")
@@ -39,21 +39,21 @@ def retar_lider_gimnasio():
     if entrenador_principal().default_pokemon != None:
         if len(lista_gimnasios) > 0:
             for index, gimnasio in enumerate(lista_gimnasios, 1):
-                print(f"{index} - {gimnasio} - {gimnasio.medalla}")
+                print(f"{index} - {gimnasio} - {gimnasio.medalla} - Pokemon: {gimnasio.entrenador.default_pokemon}")
 
             opt = int(input("Que gimnasio desea retar? "))
 
             gimnasio_seleccionado = lista_gimnasios[opt-1]
 
             if calcular_probabilidad(gimnasio_seleccionado.duelo_pokemon(entrenador_principal())):
+                entrenador_principal().default_pokemon.recibir_ataque(entrenador_principal().default_pokemon.defensa_actual - gimnasio_seleccionado.entrenador.default_pokemon.habilidad.dano)
                 entrenador_principal().agregar_medalla(lista_gimnasios[opt-1].medalla)
                 gimnasio_seleccionado.remover_medalla()
                 lista_gimnasios.pop(opt-1)
                 print("Ganaste")
-                entrenador_principal().default_pokemon.recibir_ataque(gimnasio_seleccionado.entrenador.default_pokemon.ataque_base - entrenador_principal().default_pokemon.defensa_actual)
             else:
-                print("Perdiste")
                 entrenador_principal().default_pokemon.salud_actual = 0
+                print("Perdiste")
         else:
             print("Ya has conseguido derrotar a todos los lideres de gimnasio!")
     else:

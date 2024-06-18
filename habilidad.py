@@ -1,5 +1,5 @@
 class Habilidad:
-    def __init__(self, nombre, dano):
+    def __init__(self, nombre: str, dano: int):
         self.__nombre = nombre
         self.__dano = dano
 

@@ -10,26 +10,26 @@ from calcular_probabilidad import calcular_probabilidad
 
 
 
-lista_pokemons = [Pokemon("Pikachu", 25, "Eléctrico", 100, 55, 40),
-    Pokemon("Charizard", 36, "Fuego", 150, 84, 78),
-    Pokemon("Bulbasaur", 16, "Planta", 120, 49, 49),
-    Pokemon("Squirtle", 10, "Agua", 90, 48, 65),
-    Pokemon("Jigglypuff", 12, "Normal", 110, 45, 20),
-    Pokemon("Gengar", 28, "Fantasma", 120, 65, 60),
-    Pokemon("Eevee", 18, "Normal", 80, 55, 50),
-    Pokemon("Snorlax", 50, "Normal", 300, 110, 65),
-    Pokemon("Dragonite", 55, "Dragón", 200, 134, 95),
-    Pokemon("Mewtwo", 70, "Psíquico", 200, 150, 90),
-    Pokemon("Gyarados", 35, "Agua", 150, 125, 79),
-    Pokemon("Arcanine", 40, "Fuego", 200, 110, 80),
-    Pokemon("Machamp", 32, "Lucha", 160, 130, 75),
-    Pokemon("Lapras", 45, "Agua/Hielo", 250, 85, 80),
-    Pokemon("Alakazam", 38, "Psíquico", 120, 105, 55),
-    Pokemon("Golem", 42, "Roca", 180, 120, 130),
-    Pokemon("Blastoise", 36, "Agua", 170, 83, 100),
-    Pokemon("Venusaur", 36, "Planta", 180, 82, 83),
-    Pokemon("Jolteon", 30, "Eléctrico", 130, 65, 60),
-    Pokemon("Flareon", 30, "Fuego", 130, 95, 60)]
+lista_pokemons = [Pokemon("Pikachu", 25, "Eléctrico", 100, 40, "Impactrueno", 57),
+    Pokemon("Charizard", 36, "Fuego", 150, 78, "Impactrueno", 88),
+    Pokemon("Bulbasaur", 16, "Planta", 120, 49, "Impactrueno", 76),
+    Pokemon("Squirtle", 10, "Agua", 90, 48, "Impactrueno", 23),
+    Pokemon("Jigglypuff", 12, "Normal", 110, 20, "Impactrueno", 89),
+    Pokemon("Gengar", 28, "Fantasma", 120, 60, "Impactrueno", 12),
+    Pokemon("Eevee", 18, "Normal", 80, 50, "Impactrueno", 73),
+    Pokemon("Snorlax", 50, "Normal", 300, 65, "Impactrueno", 22),
+    Pokemon("Dragonite", 55, "Dragón", 200, 95, "Impactrueno", 87),
+    Pokemon("Mewtwo", 70, "Psíquico", 200,  90, "Impactrueno", 56),
+    Pokemon("Gyarados", 35, "Agua", 150, 79, "Impactrueno", 51),
+    Pokemon("Arcanine", 40, "Fuego", 200,  80, "Impactrueno", 52),
+    Pokemon("Machamp", 32, "Lucha", 160,  75, "Impactrueno", 56),
+    Pokemon("Lapras", 45, "Agua/Hielo", 85, 80, "Impactrueno", 75),
+    Pokemon("Alakazam", 38, "Psíquico", 105, 55, "Impactrueno", 91),
+    Pokemon("Golem", 42, "Roca", 180,  130, "Impactrueno", 11),
+    Pokemon("Blastoise", 36, "Agua", 170, 100, "Impactrueno", 54),
+    Pokemon("Venusaur", 36, "Planta", 180, 83, "Impactrueno", 58),
+    Pokemon("Jolteon", 30, "Eléctrico", 65, 60, "Impactrueno", 72),
+    Pokemon("Flareon", 30, "Fuego", 130, 60, "Impactrueno", 82)]
 
 
 lista_pokedex = [Pokedex(), Pokedex(), Pokedex()]
@@ -74,14 +74,14 @@ lista_entrenadores[2].agregar_pokemon(lista_pokemons[19])
 lista_entrenadores[1].elegir_pokemon(0)
 lista_entrenadores[2].elegir_pokemon(0)
 
-lista_pokemons[0].agregar_habilidad(Habilidad("Chispa", 30))
-lista_pokemons[0].agregar_habilidad(Habilidad("Imapct Trueno", 50))
+# lista_pokemons[0].agregar_habilidad(Habilidad("Chispa", 30))
+# lista_pokemons[0].agregar_habilidad(Habilidad("Imapct Trueno", 50))
 
-lista_pokemons[1].agregar_habilidad(Habilidad("Garra Umbria", 70))
-lista_pokemons[1].agregar_habilidad(Habilidad("Garra Metal", 50))
+# lista_pokemons[1].agregar_habilidad(Habilidad("Garra Umbria", 70))
+# lista_pokemons[1].agregar_habilidad(Habilidad("Garra Metal", 50))
 
-lista_pokemons[2].agregar_habilidad(Habilidad("Placaje", 30))
-lista_pokemons[2].agregar_habilidad(Habilidad("Latigo Cepa", 80))
+# lista_pokemons[2].agregar_habilidad(Habilidad("Placaje", 30))
+# lista_pokemons[2].agregar_habilidad(Habilidad("Latigo Cepa", 80))
 
 
 lista_gimnasios = [
