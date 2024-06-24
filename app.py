@@ -27,14 +27,14 @@ def capturar_pokemon():
     if opt == 1:
         if entrenador_principal().capturar_pokemon(lista_pokemons[pokemon_random]):
             entrenador_principal().default_pokemon.recibir_ataque(
-                lista_pokemons[pokemon_random].ataque_base
+                lista_pokemons[pokemon_random].habilidad.dano
                 - entrenador_principal().default_pokemon.defensa_actual
             )
             print("Lo has logrado capturar!")
         else:
             print(f"Oh no, el {lista_pokemons[pokemon_random].nombre} a huido!")
             entrenador_principal().default_pokemon.recibir_ataque(
-                lista_pokemons[pokemon_random].ataque_base
+                lista_pokemons[pokemon_random].habilidad.dano
             )
 
     elif opt == 2:
@@ -63,7 +63,7 @@ def retar_lider_gimnasio():
                 lista_gimnasios.pop(opt - 1)
                 print("Ganaste")
                 entrenador_principal().default_pokemon.recibir_ataque(
-                    gimnasio_seleccionado.entrenador.default_pokemon.ataque_base
+                    gimnasio_seleccionado.entrenador.default_pokemon.habilidad.dano
                     - entrenador_principal().default_pokemon.defensa_actual
                 )
             else:
