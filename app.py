@@ -83,18 +83,25 @@ def aplicar_objeto():
             print(f"\t║{i}- {objeto}║")
 
         objeto_elegido = int(input("Elija un objeto: "))
+        if objeto_elegido > len(entrenador_principal().objetos) or objeto_elegido < 0:
+            print("Este objeto no existe")
+        else:
+            print("Tus Pokemons:")
+            for i, pokemon in enumerate(entrenador_principal().equipo, 1):
+                print(f"\t║{i}- {pokemon}║")
 
-        print("Tus Pokemons:")
-        for i, pokemon in enumerate(entrenador_principal().equipo, 1):
-            print(f"\t║{i}- {pokemon}║")
-
-        pokemon_elegido = int(input("En quien quiere usar el objeto: "))
-
-        entrenador_principal().usar_objeto(objeto_elegido - 1, pokemon_elegido - 1)
+            pokemon_elegido = int(input("En quien quiere usar el objeto: "))
+            if pokemon_elegido> len(entrenador_principal().equipo) or pokemon_elegido < 0:
+                print("Este pokemon no existe")
+            else:
+                
+                entrenador_principal().usar_objeto(objeto_elegido - 1, pokemon_elegido - 1)
+                print(f"Objeto usado:{entrenador_principal().objetos[objeto_elegido - 1]}")
+                
     else:
         print("No tienes objetos")
 
-    # print(entrenador_principal().equipo[0].salud)
+    
 
 
 def comprar_objeto():
@@ -116,7 +123,7 @@ def comprar_objeto():
 def ver_pokedex():
     system("cls")
     print("Pokedex: ")
-    if len(entrenador_principal().pokedex) > 0:
+    if len(entrenador_principal().pokedex.pokemons) > 0:
         for pokemon in entrenador_principal().pokedex.pokemons:
             print(f"\t║{pokemon.nombre} - Nivel: {pokemon.nivel}║")
     else:

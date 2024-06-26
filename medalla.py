@@ -5,11 +5,8 @@ class Medalla:
         
 
     @property
-    def nombre(
-        self,
-    ):
+    def nombre(self):
         return self.__nombre
-
 
     def __str__(self) -> str:
         return f"|Medalla: {self.nombre}|"

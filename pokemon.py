@@ -35,7 +35,7 @@ class Pokemon:
         return self.__salud_base
         
     @property
-    def salud_actual(self,):
+    def salud_actual(self):
         return self.__salud_actual
         
     @salud_actual.setter
@@ -58,21 +58,10 @@ class Pokemon:
     def habilidad(self) -> Habilidad:
         return self.__habilidad
 
-    """def ataque_base():
-        pass"""
-
-    # def salud(self, salud_base, danio):
-    #     self.salud = self.salud - danio
-    #     pass
-    # Metodos
-
     def recibir_ataque(self, dano: int):
         self.salud_actual -= dano
         if self.salud_actual < 0:
             self.salud_actual = 0
-
-    # def agregar_habilidad(self, habilidad: Habilidad):
-    #     self.habilidades.append(habilidad)
 
     def subir_nivel(self, niveles):
         self.nivel += niveles

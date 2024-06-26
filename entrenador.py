@@ -16,7 +16,7 @@ class Entrenador:
         self.__equipo: list = []
         self.__objetos: list = []
         self.__medallas: list = []
-        self.__default_pokemon = None  # HAY QUE VER ESTO.ACA PUSIMOS ASI PORQUE CUANDO QUERIAMOS RETAR A OTRO SE QUEDABA ESTO EN NONE Y NO PODIA SEGUIR
+        self.__default_pokemon = None 
         self.__pokedex = pokedex
 
     @property
@@ -66,8 +66,6 @@ class Entrenador:
         cls.__validar_nombres.append(nombre)
         return nombre
 
-    # METODOS
-
     @property
     def cant_pokemons_pokedex(self):
         return len(self.pokedex.pokemons)
@@ -79,22 +77,20 @@ class Entrenador:
     def agregar_pokemon(self, pokemon: Pokemon) -> None:
         self.equipo.append(pokemon)
 
-        # self.pokedex.agregar_pokemon(pokemon)
-
     def remover_pokemon(self, pokemon: Pokemon) -> None:
         self.equipo.remove(pokemon)
 
     def capturar_pokemon(self, pokemon: Pokemon) -> bool:
         if calcular_probabilidad(pokemon.nivel) and len(self.equipo) < 5:
             self.agregar_pokemon(pokemon)
-            # self.pokedex.agregar_pokemon(pokemon)
+            
             return True
         return False
 
     def elegir_pokemon(self, index: int):
         self.default_pokemon = self.equipo[index]
 
-    def usar_objeto(self, indice_objeto: int, indice_pokemon: int) -> bool:
+    def usar_objeto(self, indice_objeto: int, indice_pokemon: int):
         objeto = self.objetos[indice_objeto]
         pokemon = self.equipo[indice_pokemon]
 
@@ -116,11 +112,12 @@ class Entrenador:
                 pokemon.defensa_actual = min(80, pokemon.defensa_actual + objeto.efecto)
                 objeto_usado = self.objetos.pop(indice_objeto)
                 return objeto_usado
+        
 
-    def agregar_objeto(self, objeto: Objeto) -> None:
+    def agregar_objeto(self, objeto: Objeto):
         self.objetos.append(objeto)
 
-    def agregar_medalla(self, medalla: Medalla) -> None:
+    def agregar_medalla(self, medalla: Medalla):
         self.medallas.append(medalla)
 
     def __str__(self) -> str:

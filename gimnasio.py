@@ -26,15 +26,12 @@ class Gimnasio():
     def medalla(self, new_medalla):
          self.__medalla = new_medalla
     
-    #METODOS
-    
     def pokemon_entrenador(self):
         return self.entrenador.default_pokemon.nivel
     
     def duelo_pokemon(self, entrenador: Entrenador):
         return self.entrenador.default_pokemon.nivel - entrenador.default_pokemon.nivel
-    
-    
+     
     def remover_medalla(self):
         self.medalla = None
     

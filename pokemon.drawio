@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Página-1" id="fg697A6MTHWbqzjaUPer">
-        <mxGraphModel dx="747" dy="503" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1097" dy="496" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -19,7 +19,7 @@
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-5" value="Pokemon" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="840" y="340" width="250" height="268" as="geometry"/>
                 </mxCell>
-                <mxCell id="55MPb7F4AEdg9HZ-oGf9-6" value="- nombre: str {readonly}&lt;div&gt;- nivel: int&lt;/div&gt;&lt;div&gt;- tipo: str {readonly}&lt;/div&gt;&lt;div&gt;- salud: int&lt;/div&gt;&lt;div&gt;- ataque_base: int&lt;/div&gt;&lt;div&gt;- defensa: int&lt;/div&gt;&lt;div&gt;- habilidades: list&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="55MPb7F4AEdg9HZ-oGf9-5" vertex="1">
+                <mxCell id="55MPb7F4AEdg9HZ-oGf9-6" value="- nombre: str {readonly}&lt;div&gt;- nivel: int&lt;/div&gt;&lt;div&gt;- tipo: str {readonly}&lt;/div&gt;&lt;div&gt;- salud_base: int&lt;/div&gt;&lt;div&gt;- salud_actual: int&lt;/div&gt;&lt;div&gt;- defensa_base: int&lt;/div&gt;&lt;div&gt;- defensa_actual: int&lt;/div&gt;&lt;div&gt;- habilidad: Habilidad&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="55MPb7F4AEdg9HZ-oGf9-5" vertex="1">
                     <mxGeometry y="26" width="250" height="154" as="geometry"/>
                 </mxCell>
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="55MPb7F4AEdg9HZ-oGf9-5" vertex="1">
@@ -145,7 +145,7 @@
                 <mxCell id="55MPb7F4AEdg9HZ-oGf9-61" value="*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="650" y="540" width="30" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="55MPb7F4AEdg9HZ-oGf9-62" value="" style="endArrow=diamondThin;endFill=1;endSize=12;html=1;rounded=0;exitX=0.481;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.485;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="55MPb7F4AEdg9HZ-oGf9-20" edge="1" target="55MPb7F4AEdg9HZ-oGf9-5">
+                <mxCell id="55MPb7F4AEdg9HZ-oGf9-62" value="" style="endArrow=diamondThin;endFill=1;endSize=12;html=1;rounded=0;exitX=0.481;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.485;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="55MPb7F4AEdg9HZ-oGf9-20" target="55MPb7F4AEdg9HZ-oGf9-5" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
                         <mxPoint x="961.75" y="335.712" as="sourcePoint"/>
                         <mxPoint x="1030" y="300" as="targetPoint"/>

@@ -6,9 +6,7 @@ class Objeto:
         self.__efecto = efecto
 
     @property
-    def nombre(
-        self,
-    ):
+    def nombre(self):
         return self.__nombre
 
     @nombre.setter
@@ -16,9 +14,7 @@ class Objeto:
         self.__nombre = new_nombre
 
     @property
-    def tipo(
-        self,
-    ):
+    def tipo(self):
         return self.__tipo
 
     @tipo.setter
@@ -26,9 +22,7 @@ class Objeto:
         self.__tipo = new_tipo
 
     @property
-    def efecto(
-        self,
-    ):
+    def efecto(self):
         return self.__efecto
 
     @efecto.setter

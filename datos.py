@@ -32,13 +32,13 @@ lista_pokemons = [ Pokemon("Pikachu", 25, "Eléctrico", 100, 50, "Impactrueno", 
     Pokemon("Alakazam", 35, "Psíquico", 80, 45, "Psíquico", 95)]
 
 
-lista_pokedex = [Pokedex(), Pokedex(), Pokedex(), Pokedex,  Pokedex(), Pokedex()]
-lista_pokedex[1].agregar_pokemon(lista_pokemons[5])
+lista_pokedex = [Pokedex(), Pokedex(), Pokedex(), Pokedex(),  Pokedex(), Pokedex()]
+
 lista_pokedex[1].agregar_pokemon(lista_pokemons[2])
-lista_pokedex[1].agregar_pokemon(lista_pokemons[3])
-lista_pokedex[1].agregar_pokemon(lista_pokemons[6])
-lista_pokedex[1].agregar_pokemon(lista_pokemons[8])
-lista_pokedex[1].agregar_pokemon(lista_pokemons[7])
+lista_pokedex[2].agregar_pokemon(lista_pokemons[3])
+lista_pokedex[3].agregar_pokemon(lista_pokemons[6])
+lista_pokedex[4].agregar_pokemon(lista_pokemons[8])
+lista_pokedex[5].agregar_pokemon(lista_pokemons[7])
 
 
 lista_entrenadores = [
@@ -82,18 +82,14 @@ lista_entrenadores[4].agregar_pokemon(lista_pokemons[14])
 
 lista_entrenadores[5].agregar_pokemon(lista_pokemons[16]) 
 
-#lista_entrenadores[0].elegirPokemon(0)
+
 lista_entrenadores[1].elegir_pokemon(0)
 lista_entrenadores[2].elegir_pokemon(0)
+lista_entrenadores[3].elegir_pokemon(0)
+lista_entrenadores[4].elegir_pokemon(0)
+lista_entrenadores[5].elegir_pokemon(0)
 
-# lista_pokemons[0].agregar_habilidad(Habilidad("Chispa", 30))
-# lista_pokemons[0].agregar_habilidad(Habilidad("Imapct Trueno", 50))
 
-# lista_pokemons[1].agregar_habilidad(Habilidad("Garra Umbria", 70))
-# lista_pokemons[1].agregar_habilidad(Habilidad("Garra Metal", 50))
-
-# lista_pokemons[2].agregar_habilidad(Habilidad("Placaje", 30))
-# lista_pokemons[2].agregar_habilidad(Habilidad("Latigo Cepa", 80))
 
 
 lista_gimnasios = [
