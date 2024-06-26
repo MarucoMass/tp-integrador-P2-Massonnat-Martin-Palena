@@ -9,5 +9,5 @@
 # 2024
 # Programación 2
 # Breve descripción que ponga en contexto lo desarrollado en el Trabajo Práctico
-Integrador
+# Integrador
 # Link al repositorio de GitHub (público)

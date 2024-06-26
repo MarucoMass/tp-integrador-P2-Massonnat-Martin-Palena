@@ -20,9 +20,7 @@ def capturar_pokemon():
     if lista_pokemons[pokemon_random] not in entrenador_principal().pokedex.pokemons:
         entrenador_principal().pokedex.agregar_pokemon(lista_pokemons[pokemon_random])
 
-    print(
-        f"Te has encontrado con un {lista_pokemons[pokemon_random].nombre} salvaje!\nQuieres capturarlo? 1-Si 2-No"
-    )
+    print(f"Te has encontrado con un {lista_pokemons[pokemon_random].nombre} salvaje!\nQuieres capturarlo? 1-Si 2-No")
     opt = int(input("Toma una decision: "))
     if opt == 1:
         if entrenador_principal().capturar_pokemon(lista_pokemons[pokemon_random]):
@@ -52,23 +50,22 @@ def retar_lider_gimnasio():
                 print(f"\t║{index} - {gimnasio} - {gimnasio.medalla}║")
 
             opt = int(input("Que gimnasio desea retar?: "))
-
-            gimnasio_seleccionado = lista_gimnasios[opt - 1]
-
-            if calcular_probabilidad(
-                gimnasio_seleccionado.duelo_pokemon(entrenador_principal())
-            ):
-                entrenador_principal().agregar_medalla(lista_gimnasios[opt - 1].medalla)
-                gimnasio_seleccionado.remover_medalla()
-                lista_gimnasios.pop(opt - 1)
-                print("Ganaste")
-                entrenador_principal().default_pokemon.recibir_ataque(
-                    gimnasio_seleccionado.entrenador.default_pokemon.habilidad.dano
-                    - entrenador_principal().default_pokemon.defensa_actual
-                )
+            if opt > len(lista_gimnasios) or opt < 0:
+                print("Gimnasio no existente")
             else:
-                entrenador_principal().default_pokemon.salud_actual = 0
-                print("Perdiste")
+                gimnasio_seleccionado = lista_gimnasios[opt - 1]
+
+                if calcular_probabilidad(gimnasio_seleccionado.duelo_pokemon(entrenador_principal())):
+                    entrenador_principal().agregar_medalla(lista_gimnasios[opt - 1].medalla)
+                    gimnasio_seleccionado.remover_medalla()
+                    lista_gimnasios.pop(opt - 1)
+                    print("Ganaste")
+                    entrenador_principal().default_pokemon.recibir_ataque(
+                        gimnasio_seleccionado.entrenador.default_pokemon.habilidad.dano 
+                        - entrenador_principal().default_pokemon.defensa_actual)
+                else:
+                    entrenador_principal().default_pokemon.salud_actual = 0
+                    print("Perdiste")
         else:
             print("Ya has conseguido derrotar a todos los lideres de gimnasio!")
     else:
