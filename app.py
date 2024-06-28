@@ -2,12 +2,6 @@ from datos import *
 import random
 from os import system
 
-# Explorar(Aca es donde aleatoriamente selecciona un pokemon y lo muestra)
-# Usar Objeto(Utilizar un objeto en un pokemon del equipo)
-# Comprar objeto(Mostramos unos objetos y preguntamos si desea comprarlo tambien validamos si tiene mas de 5 objetos)
-# Ver pokemons(Mostramos todos los pokemons que obtuvo en el juego)
-# Ir a Gimnasio(Calculamos la probabilida de que gane basandonos en el nivel del pokemon del entrenador y el nivel del pokemon del lider de gimansio)
-# Salir
 
 
 def entrenador_principal():
