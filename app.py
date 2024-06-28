@@ -86,8 +86,12 @@ def aplicar_objeto():
                 print("Este pokemon no existe")
             else:
                 
-                entrenador_principal().usar_objeto(objeto_elegido - 1, pokemon_elegido - 1)
-                print(f"Objeto usado:{entrenador_principal().objetos[objeto_elegido - 1]}")
+                objeto = entrenador_principal().usar_objeto(objeto_elegido - 1, pokemon_elegido - 1)
+                if objeto:
+                    print(objeto)
+                else:
+                    print("No se le aplico el objeto")
+                
                 
     else:
         print("No tienes objetos")
